@@ -1,4 +1,4 @@
-/* Wordfinder - Copyright (c) 2015 Felladrin - License: MIT - Version: 1.0.0 */
+/* Wordfinder - Copyright (c) 2015 Victor Nogueira - License: MIT - Version: 1.0.0 */
 window.addEventListener('load', function () {
     var words = words_pt_br;
     document.getElementById('form').addEventListener('submit', function (event) {
@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
             searchResult = '<ul><li>' + possibleWords.join('</li><li>') + '</li></ul>';
         }
         var functionEndTime = new Date().getTime();
-        document.getElementById('wordsFound').innerHTML = '<p>Palavras Encontradas: ' + possibleWords.length + ' (' + parseInt(functionEndTime - functionStartTime) + ' milisegundos)</p>' + searchResult;
+        document.getElementById('wordsFound').innerHTML = '<p>Palavras Encontradas: ' + possibleWords.length + ' (' + parseInt(functionEndTime - functionStartTime) + ' milissegundos)</p>' + searchResult;
         document.getElementById('submitButton').style.visibility = 'hidden';
     });
     document.getElementById('word').addEventListener('keyup', function (event) {

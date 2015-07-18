@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Felladrin">
+    <title>Caça-Palavras</title>
+</head>
+<body>
+<h1>Caça-Palavras</h1>
+<p>
+    Digite as letras conhecidas da palavra que você procura e depois pressione [enter].<br/>
+    Use um asterisco (*) para substituir as letras que você não conhece.<br/>
+    Por exemplo: p**g**m**
+</p>
+<form id="form">
+    <label>
+        Palavra: <input type="text" id="word">
+    </label>
+    (<span id="wordsCount">Letras: 0</span>)
+    <input type="submit" value="Pressione [enter]" id="submitButton">
+</form>
+<div id="wordsFound"></div>
+<footer>
+    <p><em>Apenas um outro experimento de Felladrin.</em></p>
+</footer>
+<script src="words_pt_br.js"></script>
+<script src="wordfinder.js"></script>
+</body>
+</html>

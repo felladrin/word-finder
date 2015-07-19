@@ -1,6 +1,5 @@
-/* Wordfinder - Copyright (c) 2015 Victor Nogueira - License: MIT - Version: 1.0.0 */
+/* Word-Finder - Copyright (c) 2015 Victor Nogueira - License: MIT - Version: 1.0.1 */
 window.addEventListener('load', function () {
-    var words = words_pt_br;
     document.getElementById('form').addEventListener('submit', function (event) {
         event.preventDefault();
         var functionStartTime = new Date().getTime();
@@ -8,7 +7,7 @@ window.addEventListener('load', function () {
         var wantedLetters = search.toLowerCase().split('');
         var possibleWords = [];
         words.forEach(function (word) {
-            var wordLetters = word.toLowerCase().split('');
+            var wordLetters = word.split('');
             if (word.length >= search.length) {
                 for (var i = 0; i < wantedLetters.length; i++) {
                     if (wantedLetters[i] !== '*' && wantedLetters[i] !== wordLetters[i]) {

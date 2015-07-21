@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Victor Nogueira">
+    <meta charset="utf-8">
     <title>Caça-Palavras</title>
+    <meta name="author" content="Victor Nogueira">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
 </head>
 <body>
-<h1>Caça-Palavras</h1>
-<p>
-    Digite as letras conhecidas da palavra que você procura e depois pressione [enter].<br/>
-    Use um asterisco (*) para substituir as letras que você não conhece.<br/>
-    Por exemplo: p**g**m**
-</p>
-<form id="form">
-    <label>
-        Palavra: <input type="text" id="word">
-    </label>
-    (<span id="wordsCount">Letras: 0</span>)
-    <input type="submit" value="Pressione [enter]" id="submitButton">
-</form>
-<div id="wordsFound"></div>
-<footer>
-    <p><em>Apenas um outro experimento de Felladrin.</em></p>
-</footer>
-<script src="words_pt_br.js"></script>
-<script src="wordfinder.js"></script>
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="twelve column">
+            <h2>Caça-Palavras</h2>
+            <p>
+                Digite as letras conhecidas da palavra que você procura e depois pressione [enter].<br/>
+                Use um asterisco (*) para substituir as letras que você não conhece.<br/>
+                Por exemplo: p**g**m**
+            </p>
+            <form id="form">
+                <label for="word">Palavra (<span id="wordsCount">Letras: 0</span>):</label>
+                <input type="text" id="word">
+                <input type="submit" value="Pressione [enter]" id="submitButton">
+            </form>
+            <div id="wordsFound"></div>
+            <footer>
+                <p><em>Apenas um outro experimento de Felladrin.</em></p>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="js/words_pt_br.js"></script>
+<script src="js/wordfinder.js"></script>
 </body>
 </html>

@@ -27,13 +27,13 @@ window.addEventListener('load', function () {
             searchResult = '<ul><li>' + possibleWords.join('</li><li>') + '</li></ul>';
         }
         var functionEndTime = new Date().getTime();
-        document.getElementById('wordsFound').innerHTML = '<p>Palavras Encontradas: ' + possibleWords.length + ' (' + parseInt(functionEndTime - functionStartTime) + ' milissegundos)</p>' + searchResult;
-        document.getElementById('submitButton').style.visibility = 'hidden';
+        document.getElementById('wordsFound').innerHTML = '<p>Palavras Encontradas: ' + possibleWords.length + ' (' + parseInt(functionEndTime - functionStartTime) + ' ms)</p>' + searchResult;
+        document.getElementById('submitButton').style.display = 'none';
     });
     document.getElementById('word').addEventListener('keyup', function (event) {
         document.getElementById('wordsCount').innerHTML = 'Letras: ' + document.getElementById('word').value.length.toString();
         if (event.keyCode != 13) {
-            document.getElementById('submitButton').style.visibility = 'visible';
+            document.getElementById('submitButton').style.display = 'initial';
         }
     });
 });
